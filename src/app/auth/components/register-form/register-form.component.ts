@@ -26,7 +26,7 @@ export class RegisterFormComponent {
     const socioRegister = this.myForm.value;
 
     this.socioService.register(socioRegister).subscribe({
-      next: () => this.router.navigateByUrl('/user-register'),
+      next: () => this.router.navigateByUrl('/auth/user-register'),
       error: (message) => {
         Swal.fire('Error', message, 'error')
       }

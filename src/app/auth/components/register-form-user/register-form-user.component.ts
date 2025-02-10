@@ -46,10 +46,10 @@ export class RegisterFormUserComponent implements OnInit {
 
       const saldoCuenta: number = saldo;
 
-      const cuenta: Cuenta = {saldo: saldoCuenta};
+      const cuenta: Cuenta = {saldo: saldoCuenta, numero_cuenta: idSocio};
 
       this.usuarioService.register(dataUser, idSocio).subscribe(resp => {
-        this.cuentaService.register(cuenta, resp.data[0].id.toString()). subscribe(respFinal => {
+        this.cuentaService.register(cuenta, idSocio). subscribe(respFinal => {
           Swal.fire('success', 'Registro correcto', 'success')
         })
       });
