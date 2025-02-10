@@ -1,0 +1,230 @@
+/* Container principal */
+.container {
+  display: flex;
+  height: 100vh;
+}
+/* Avatar circular */
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f39c12;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+/* Barra lateral */
+.sidebar {
+  background-color: #2c3e50;
+  color: #fff;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .logo h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo para el botón de Inicio */
+.home-btn {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Contenido principal */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+  overflow-y: auto;
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3498db;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Título */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Botón de Actualizar */
+.update-btn {
+  background-color: #2980b9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+  background-color: #1f6f8b;
+}
+
+/* Sección de Socios */
+.socios-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.socios-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.socio-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.socio-info h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.cuentas-info {
+  background-color: #4febff;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-top: 20px;
+}
+
+.cuentas-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cuenta-item p {
+  margin: 5px 0;
+}
+
+/* Sección de Transferencias */
+.transferencias-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.transferencias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexibilidad en el tamaño */
+  gap: 20px;
+  padding: 20px;
+}
+
+.transferencia-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.2s ease-in-out;
+}
+
+.transferencia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.transfer-avatar {
+  background-color: #2980b9;
+  color: #fff;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.transferencia-info p {
+  margin: 5px 0;
+}
+
+.transferencia-info p strong {
+  color: #3498db;
+}
+
+.socio-info p strong {
+  color: #2980b9;
+}
+
+.socio-item {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.socio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

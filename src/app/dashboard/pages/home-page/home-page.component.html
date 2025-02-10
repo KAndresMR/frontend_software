@@ -1,1 +1,71 @@
-<p>home-page works!</p>
+<div class="container">
+  <!-- Barra lateral -->
+  <div class="sidebar">
+    <div class="logo">
+      <h2>Dashboard</h2>
+    </div>
+    <ul>
+      <li><a href="javascript:void(0)" (click)="mostrarSocios()">Socios</a></li>
+      <li><a href="javascript:void(0)" (click)="mostrarTransferencias()">Transferencias</a></li>
+    </ul>
+    <!-- Enlace de Inicio -->
+    <a href="/" class="home-btn">Inicio</a>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <div class="header">
+      <h2>{{ titulo }}</h2>
+      <button class="update-btn" (click)="actualizar()">Actualizar</button>
+    </div>
+
+    <!-- Sección de Socios -->
+    <div *ngIf="mostrarSociosContenido">
+      <div class="socios-container">
+        <ul class="socios-list">
+          <li *ngFor="let socio of socios" class="socio-item">
+            <div class="socio-info">
+              <div class="avatar">
+                <span>{{ socio.nombre.charAt(0) }}</span> <!-- Inicial del nombre como círculo -->
+              </div>
+              <h3>{{ socio.nombre }}</h3>
+              <p><strong>Cédula:</strong> {{ socio.cedula }}</p>
+              <p><strong>Dirección:</strong> {{ socio.direccion }}</p>
+              <p><strong>Teléfono:</strong> {{ socio.telefono }}</p>
+            </div>
+
+            <div class="cuentas-info">
+              <h4>Cuentas:</h4>
+              <ul class="cuentas-list">
+                <li *ngFor="let cuenta of socio.cuentas" class="cuenta-item">
+                  <p><strong>Número de cuenta:</strong> {{ cuenta.numeroCuenta }}</p>
+                  <p><strong>Saldo:</strong> {{ cuenta.saldo | currency }}</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sección de Transferencias -->
+    <div *ngIf="mostrarTransferenciasContenido">
+      <div class="transferencias-container">
+        <div class="transferencias-grid">
+          <div *ngFor="let transferencia of transferencias" class="transferencia-card">
+            <div class="avatar transfer-avatar">
+              <span>{{ transferencia.tipo.charAt(0) }}</span>
+            </div>
+            <div class="transferencia-info">
+              <p><strong>ID:</strong> {{ transferencia.id }}</p>
+              <p><strong>Tipo:</strong> {{ transferencia.tipo }}</p>
+              <p><strong>Monto:</strong> {{ transferencia.monto | currency }}</p>
+              <p><strong>Número de Cuenta Destino:</strong> {{ transferencia.numeroCuentaDestino }}</p>
+              <p><strong>Fecha de Pago:</strong> {{ transferencia.fechaPago || 'Pendiente' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
