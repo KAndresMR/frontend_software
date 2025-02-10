@@ -5,17 +5,23 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { UserRegisterComponent } from './pages/user-register/user-register.component';
+import { RegisterFormUserComponent } from './components/register-form-user/register-form-user.component';
 
 
 @NgModule({
   declarations: [
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    RegisterFormComponent,
+    UserRegisterComponent,
+    RegisterFormUserComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class AuthModule { }
