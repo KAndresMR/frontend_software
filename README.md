@@ -2,6 +2,58 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
+
+## Descripción
+
+Este proyecto es un sistema de gestión de cajas de ahorro con un dashboard intuitivo y funcional. Permite a los usuarios acceder a su información financiera de manera segura y organizada.
+
+El sistema está desarrollado con las siguientes tecnologías:
+
+Frontend: Angular
+
+Backend: Spring Boot
+
+Base de datos: PostgreSQL
+
+## Características
+
+Autenticación
+
+Los usuarios pueden iniciar sesión con sus credenciales.
+
+Se valida la identidad del usuario antes de permitir el acceso al dashboard.
+
+
+
+## Dashboard
+
+El dashboard está estructurado en tres secciones principales:
+
+### 1. Sección de Perfil:
+
+Muestra la foto del usuario.
+
+Muestra su correo electrónico registrado.
+
+### 2. Sección de Navegación:
+
+Contiene botones que permiten navegar entre diferentes módulos del sistema.
+
+Al hacer clic en un botón, se redirige a la vista correspondiente.
+
+### 3. Sección de Contenido Dinámico:
+
+Muestra la información según la ventana seleccionada.
+
+Permite la gestión de datos relacionados con las cajas de ahorro.
+
+
+
+
+
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
