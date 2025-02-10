@@ -1,0 +1,37 @@
+<form autocomplete="off" [formGroup]="myForm" (ngSubmit)="register()">
+  <h2>Register</h2>
+
+  <div class="input-group">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="nombre" placeholder="Nombre" formControlName="nombre">
+    <span class="error-message"></span>
+  </div>
+
+  <div class="input-group">
+    <label for="cedula">Cedula</label>
+    <input id="cedula" type="text" placeholder="cedula" formControlName="cedula">
+    <span class="error-message"></span>
+  </div>
+
+  <div class="input-group">
+    <label for="direccion">Direccion</label>
+    <input id="direccion" type="direccion" placeholder="Ingrese su contraseña" formControlName="direccion">
+    <span class="error-message"></span>
+  </div>
+
+  <div class="input-group">
+    <label for="telefono">Telefono</label>
+    <input id="telefono" type="telefono" placeholder="Ingrese su contraseña" formControlName="telefono">
+    <span class="error-message"></span>
+  </div>
+
+  <div class="submit-group">
+    <button [disabled]="myForm.invalid" type="submit">
+      Register
+    </button>
+  </div>
+
+  <div class="login-link">
+    <a routerLink="/auth/user-register">Regresar Usuario</a>
+  </div>
+</form>
